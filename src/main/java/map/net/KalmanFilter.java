@@ -8,13 +8,18 @@ import java.util.ArrayList;
 public class KalmanFilter {
 
     /* Complete calculation of Kalman Filter */
-    public static Double refine (ArrayList<Double> inputValues, double initialVariance, double noise){
+    public static Double kalman (ArrayList<Double> inputValues, double initialVariance, double noise){
         return calculate(inputValues, initialVariance, noise);
     }
 
     /* Calculation of Kalman Filter using default values for wireless Access Points data acquisition */
-    public static Double refine (ArrayList<Double> inputValues){
+    public static Double kalman (ArrayList<Double> inputValues){
         return calculate(inputValues, 50.0, 0.008);
+    }
+
+    /* Calculation of arithmetic mean */
+    public static Double mean (ArrayList<Double> inputValues){
+        return Utils.mean(inputValues);
     }
 
 

@@ -19,7 +19,7 @@ final class Utils {
         return sum/(values.size()-1);
     }
 
-    private static Double mean (ArrayList<Double> values){
+    static Double mean (ArrayList<Double> values){
         return sum(values)/values.size();
     }
 

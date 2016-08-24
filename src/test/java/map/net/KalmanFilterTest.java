@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class KalmanFilterTest  {
 
     @Test
-    public void testRefine() {
+    public void testKalman() {
 
         ArrayList<Double> nums = new ArrayList<Double>();
 
@@ -18,7 +18,7 @@ public class KalmanFilterTest  {
         nums.add(-2.0);
         nums.add(-113.0);
 
-        Double result = KalmanFilter.refine(nums);
+        Double result = KalmanFilter.kalman(nums);
         assert (Math.abs(result - (-4.430216))< 0.0001);
 
 
